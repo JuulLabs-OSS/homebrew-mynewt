@@ -7,9 +7,8 @@ class MynewtNewt < Formula
 
   head "https://github.com/apache/incubator-mynewt-newt.git"
 
-
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/releases/download/mynewt-newt_1_0_0/"
+    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     cellar :any_skip_relocation
     sha256 "bbcd73426e3807261102d59687cdf77e369a6d172a61394351c1ffc4ffd27396" => :mavericks_or_later
   end

@@ -1,5 +1,5 @@
 class MynewtNewtmgr < Formula
-  desc "Tool to communicate with remote Mynewt OS applications via the Newtmgr Protocol"
+  desc "Tool to manage devices running Mynewt OS via the Newtmgr Protocol"
   homepage "https://mynewt.apache.org"
   url "https://github.com/apache/incubator-mynewt-newt/archive/mynewt_1_0_0_tag.tar.gz"
   version "1.0.0"
@@ -8,7 +8,7 @@ class MynewtNewtmgr < Formula
   head "https://github.com/apache/incubator-mynewt-newt.git"
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/releases/download/mynewt-newt_1_0_0/"
+    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     cellar :any_skip_relocation
     sha256 "a4a8878e5062756d431eaacc383f38a74fb1e28a74198b4fc1ca0c7620936b2e" => :mavericks_or_later
   end
