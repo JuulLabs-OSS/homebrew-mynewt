@@ -1,17 +1,18 @@
 class MynewtNewt < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
-  url "https://github.com/apache/incubator-mynewt-newt/archive/mynewt_1_0_0_tag.tar.gz"
-  version "1.0.0"
-  sha256 "699239691b6fe2e5bb0bb24727cd56740400e6074a369756b890ea7ec290d1bd"
+  url "https://github.com/apache/mynewt-newt/archive/mynewt_1_1_0_tag.tar.gz"
+  version "1.1.0"
+  sha256 "66a90b54034255e073206cc27d9d1a63b76d6dd56a847e4f224a50e3de942aad"
 
-  head "https://github.com/apache/incubator-mynewt-newt.git"
+  head "https://github.com/apache/mynewt-newt.git"
 
-  bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
-    cellar :any_skip_relocation
-    sha256 "bbcd73426e3807261102d59687cdf77e369a6d172a61394351c1ffc4ffd27396" => :mavericks_or_later
-  end
+#  bottle do
+#    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
+#    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
+#    cellar :any_skip_relocation
+#    sha256 "8e394fe3427794a4bf9a4945915855fa5f8b2c003dc26a9f91ea4af403388231" => :sierra
+#  end
 
   depends_on "go" => :build
   depends_on :arch => :x86_64
@@ -31,6 +32,6 @@ class MynewtNewt < Formula
 
   test do
     # Compare newt version string
-    assert_equal "1.0.0", shell_output("#{bin}/newt version").split.last
+    assert_equal "1.1.0", shell_output("#{bin}/newt version").split.last
   end
 end
