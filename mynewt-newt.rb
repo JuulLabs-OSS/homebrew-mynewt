@@ -7,12 +7,12 @@ class MynewtNewt < Formula
 
   head "https://github.com/apache/mynewt-newt.git"
 
-#  bottle do
-#    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
-#    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
-#    cellar :any_skip_relocation
-#    sha256 "8e394fe3427794a4bf9a4945915855fa5f8b2c003dc26a9f91ea4af403388231" => :sierra
-#  end
+  bottle do
+#     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
+    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
+    cellar :any_skip_relocation
+    sha256 "83e119596ffa17c1f828686245428082e0cb4605680c93ea01155994c82595ce" => :el_capitan
+  end
 
   depends_on "go" => :build
   depends_on :arch => :x86_64

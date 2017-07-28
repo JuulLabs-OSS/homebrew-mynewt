@@ -5,13 +5,12 @@ class MynewtNewtAT10 < Formula
   version "1.0.0"
   sha256 "6c39967881357b228c54683c1eaffb47662edbafee7e07c1a27351857a54b5dd"
 
-#  bottle do
+  bottle do
 #    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
-#    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
-#    cellar :any_skip_relocation
-#    sha256 "bbcd73426e3807261102d59687cdf77e369a6d172a61394351c1ffc4ffd27396" => :mavericks_or_later
-#     sha256 "2906f1881845597bef90d02d7581a7b518af0c75b58ebf88676b30ad6995ba28" => :sierra
-#  end
+    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
+    cellar :any_skip_relocation
+    sha256 "6af9fd1e94593b73ee9fcd6511fcf648005db413a3a6cc76709a8b8c219c5a1f" => :el_capitan
+  end
    
   keg_only :versioned_formula
 

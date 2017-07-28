@@ -3,16 +3,16 @@ class MynewtNewtmgr < Formula
   homepage "https://mynewt.apache.org"
   url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_1_0_tag.tar.gz"
   version "1.1.0"
-  sha256 "5a1e75a5201869ee35ade2eb61eadd6a5e0ad76308e30e0268381b2745326f19"
+  sha256 "8077d285aaecf61d4d11d45c56640197ad1ff8f9fa93485893c65ee57818ecde"
 
   head "https://github.com/apache/mynewt-newtmgr.git"
 
-#  bottle do
+  bottle do
 #    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
 #    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master/"
-#     cellar :any_skip_relocation
-#     sha256 "ab43fa70023eba77122b52ccc8b9ddc08bbc2d154667b1c298182e5538b53f95" => :sierra
-#  end
+     cellar :any_skip_relocation
+     sha256 "cefe59d785fc43523e7341c2231690703f885e8510c9ec8f3bee30e6c0943419" => :el_capitan
+  end
 
   depends_on "go" => :build
   depends_on :arch => :x86_64

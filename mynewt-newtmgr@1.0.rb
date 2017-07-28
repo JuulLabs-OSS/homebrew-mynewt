@@ -7,11 +7,11 @@ class MynewtNewtmgrAT10 < Formula
 
 #  head "https://github.com/apache/incubator-mynewt-newt.git"
 
-#  bottle do
+  bottle do
 #    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
-#    cellar :any_skip_relocation
-#    sha256 "a4a8878e5062756d431eaacc383f38a74fb1e28a74198b4fc1ca0c7620936b2e" => :mavericks_or_later
-#  end
+    cellar :any_skip_relocation
+    sha256 "e8b84cca0cd5a92dff33e343ca9de87bdfed51353ccfbeadb8aea6c63704c114" => :el_capitan
+  end
 
 keg_only :versioned_formula
 
