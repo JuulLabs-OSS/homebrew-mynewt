@@ -9,6 +9,7 @@ class MynewtNewtAT10 < Formula
 #    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
     cellar :any_skip_relocation
+    sha256 "1ecb25e903ae3dcb35461455babaccf7c061b95a1a95f0bc6b16d646052c4546" => :yosemite
     sha256 "6af9fd1e94593b73ee9fcd6511fcf648005db413a3a6cc76709a8b8c219c5a1f" => :el_capitan
   end
    

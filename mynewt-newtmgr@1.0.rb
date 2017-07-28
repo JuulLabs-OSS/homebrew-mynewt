@@ -10,6 +10,7 @@ class MynewtNewtmgrAT10 < Formula
   bottle do
 #    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     cellar :any_skip_relocation
+    sha256 "f824ccea8eae3ac293f450d5e0d4d8a4b1e928394f4d979ab740fe67b8c97ec0" => :yosemite
     sha256 "e8b84cca0cd5a92dff33e343ca9de87bdfed51353ccfbeadb8aea6c63704c114" => :el_capitan
   end
 
