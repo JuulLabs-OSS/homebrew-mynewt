@@ -6,12 +6,11 @@ class MynewtNewtAT10 < Formula
   sha256 "6c39967881357b228c54683c1eaffb47662edbafee7e07c1a27351857a54b5dd"
 
   bottle do
-#    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
-    root_url "https://github.com/cwanda/homebrew-testmynewt/raw/master"
+    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     cellar :any_skip_relocation
     sha256 "d79f086e378b58b239c4bdf055200bf8d9a85b5068752e4da475999c2d4596fe" => :sierra
-    sha256 "1ecb25e903ae3dcb35461455babaccf7c061b95a1a95f0bc6b16d646052c4546" => :yosemite
     sha256 "6af9fd1e94593b73ee9fcd6511fcf648005db413a3a6cc76709a8b8c219c5a1f" => :el_capitan
+    sha256 "1ecb25e903ae3dcb35461455babaccf7c061b95a1a95f0bc6b16d646052c4546" => :yosemite
   end
    
   keg_only :versioned_formula
