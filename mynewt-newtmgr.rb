@@ -1,16 +1,18 @@
 class MynewtNewtmgr < Formula
   desc "Tool to manage devices running Mynewt OS via the Newtmgr Protocol"
   homepage "https://mynewt.apache.org"
-  url "https://github.com/apache/incubator-mynewt-newt/archive/mynewt_1_0_0_tag.tar.gz"
-  version "1.0.0"
-  sha256 "699239691b6fe2e5bb0bb24727cd56740400e6074a369756b890ea7ec290d1bd"
+  url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_1_0_tag.tar.gz"
+  version "1.1.0"
+  sha256 "8077d285aaecf61d4d11d45c56640197ad1ff8f9fa93485893c65ee57818ecde"
 
-  head "https://github.com/apache/incubator-mynewt-newt.git"
+  head "https://github.com/apache/mynewt-newtmgr.git"
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
-    cellar :any_skip_relocation
-    sha256 "a4a8878e5062756d431eaacc383f38a74fb1e28a74198b4fc1ca0c7620936b2e" => :mavericks_or_later
+     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
+     cellar :any_skip_relocation
+     sha256 "37cc3c3bb174ec084bca317eb0a5018e7b489b9c8006e04609b7681820c9ce39" => :sierra
+     sha256 "cefe59d785fc43523e7341c2231690703f885e8510c9ec8f3bee30e6c0943419" => :el_capitan
+     sha256 "1c03414d3f5c821b6040160a6a6c5036cd61f7579075736e57bb305d5fd779f0" => :yosemite
   end
 
   depends_on "go" => :build
@@ -19,11 +21,21 @@ class MynewtNewtmgr < Formula
   def install
     contents = Dir["{*,.git,.gitignore}"]
     gopath = buildpath/"gopath"
-    (gopath/"src/mynewt.apache.org/newt").install contents
+    (gopath/"src/mynewt.apache.org/newtmgr").install contents
     ENV["GOPATH"] = gopath
     ENV.prepend_create_path "PATH", gopath/"bin"
 
-    cd gopath/"src/mynewt.apache.org/newt/newtmgr" do
+# We are not able to vendor these packages due to a "go get" bug in 
+# vendoring packages with platform dependent code. So we have to get
+# these packages for the buid.
+  
+    cd gopath/"src" do
+       system "go", "get", "github.com/currantlabs/ble"
+       system "go", "get", "github.com/raff/goble"
+       system "go", "get", "github.com/mgutz/logxi/v1"
+    end
+
+    cd gopath/"src/mynewt.apache.org/newtmgr/newtmgr" do
       system "go", "install"
       bin.install gopath/"bin/newtmgr"
     end
