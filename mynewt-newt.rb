@@ -1,18 +1,17 @@
 class MynewtNewt < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
-  url "https://github.com/apache/mynewt-newt/archive/mynewt_1_1_0_tag.tar.gz"
-  version "1.1.0"
-  sha256 "66a90b54034255e073206cc27d9d1a63b76d6dd56a847e4f224a50e3de942aad"
+  url "https://github.com/apache/mynewt-newt/archive/mynewt_1_2_0_tag.tar.gz"
+  version "1.2.0"
+  sha256 "41e1b7ee526d1861e7b1e880848d090484960a6bafb31bb62d38d25212146736"
 
   head "https://github.com/apache/mynewt-newt.git"
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.1.0"
+    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.2.0"
     cellar :any_skip_relocation
-    sha256 "68221671cc744d90ae06235e49a8638dd75a36677d27baea7f16ef1482a4127e" => :sierra
-    sha256 "83e119596ffa17c1f828686245428082e0cb4605680c93ea01155994c82595ce" => :el_capitan
-    sha256 "3092023e660ac252c5ad07166f9ea6ebb31f665c4c1d496698b7982de9d9dc08" => :yosemite
+    sha256 "e3c51a0b13d07802e89993fef48a7ae8c519cecf1468815967e3c6993105859c" => :sierra
+    sha256 "0a35aad27486a8dda70791798644d5c8818fe69db772920ff14a674318468801" => :el_capitan
   end
 
   depends_on "go" => :build
@@ -33,6 +32,6 @@ class MynewtNewt < Formula
 
   test do
     # Compare newt version string
-    assert_equal "1.1.0", shell_output("#{bin}/newt version").split.last
+    assert_equal "1.2.0", shell_output("#{bin}/newt version").split.last
   end
 end
