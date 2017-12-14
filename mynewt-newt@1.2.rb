@@ -1,16 +1,16 @@
-class MynewtNewt < Formula
+class MynewtNewtAT12 < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
-  url "https://github.com/apache/mynewt-newt/archive/mynewt_1_3_0_tag.tar.gz"
-  version "1.3.0"
-  sha256 "6fa33e4dae06ff8b6c8788a24b6c29f0587d82dcdc5fe58ea16dcd5078d34076"
+  url "https://github.com/apache/mynewt-newt/archive/mynewt_1_2_0_tag.tar.gz"
+  version "1.2.0"
+  sha256 "41e1b7ee526d1861e7b1e880848d090484960a6bafb31bb62d38d25212146736"
 
-  head "https://github.com/apache/mynewt-newt.git"
+  keg_only :versioned_formula
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.3.0"
+    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.2.0"
     cellar :any_skip_relocation
-    sha256 "7f98f1b86092e5fc81660ad7ab90591c47f8b01aa8cd6b4aff4959809c3ea91d" => :sierra
+    sha256 "14c58895c9805aa1df17638e483adb8a37fdb6911f96c7e80535fed2fa82ac94" => :sierra
   end
 
   depends_on "go" => :build
@@ -31,6 +31,6 @@ class MynewtNewt < Formula
 
   test do
     # Compare newt version string
-    assert_equal "1.3.0", shell_output("#{bin}/newt version").split.last
+    assert_equal "1.2.0", shell_output("#{bin}/newt version").split.last
   end
 end
