@@ -1,16 +1,16 @@
-class MynewtNewtmgr < Formula
+class MynewtNewtmgrAT13 < Formula
   desc "Tool to manage devices running Mynewt OS via the Newtmgr Protocol"
   homepage "https://mynewt.apache.org"
-  url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_4_0_tag.tar.gz"
-  version "1.4.0"
-  sha256 "d0a8c3a782714d5a7713f842c6fb71ae020b2dcd0883812d386a27035d24878b"
+  url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_3_0_tag.tar.gz"
+  version "1.3.0"
+  sha256 "6d9b8fd8a89fdef8aa9062ebc9d59b96878641002f85a10baa63756c0968b74e"
 
-  head "https://github.com/apache/mynewt-newtmgr.git"
+  keg_only :versioned_formula
 
   bottle do
-     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.4.0"
+     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.3.0"
      cellar :any_skip_relocation
-    sha256 "1ae61b32dd1b36b19ed8ba50c38ab8825b5ab837561364bd0f87927947679d8a" => :sierra
+    sha256 "288686fd6a6c169b0b947872274ca2f24721d1ec88d5c7d2ec06db7854012abe" => :sierra
   end
 
   depends_on "go" => :build
