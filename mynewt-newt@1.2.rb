@@ -8,7 +8,7 @@ class MynewtNewtAT12 < Formula
   keg_only :versioned_formula
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.2.0"
+    root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.2.0"
     cellar :any_skip_relocation
     sha256 "14c58895c9805aa1df17638e483adb8a37fdb6911f96c7e80535fed2fa82ac94" => :sierra
   end

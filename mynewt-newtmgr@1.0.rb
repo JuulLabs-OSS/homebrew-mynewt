@@ -6,7 +6,7 @@ class MynewtNewtmgrAT10 < Formula
   sha256 "6c39967881357b228c54683c1eaffb47662edbafee7e07c1a27351857a54b5dd"
 
   bottle do
-    root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
+    root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.0.0"
     cellar :any_skip_relocation
     sha256 "63b1be15469ddbacb31ccc10eb0f8314f8248b3c2d94b6e31f1259c361ec2128" => :sierra
     sha256 "e8b84cca0cd5a92dff33e343ca9de87bdfed51353ccfbeadb8aea6c63704c114" => :el_capitan
