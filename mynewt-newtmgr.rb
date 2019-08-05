@@ -8,7 +8,7 @@ class MynewtNewtmgr < Formula
   head "https://github.com/apache/mynewt-newtmgr.git"
 
   bottle do
-     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.6.0"
+     root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.6.0"
      cellar :any_skip_relocation
     sha256 "653580c0726b8f4740fcf71d775efe0758f1eff9fd7c0a6273cede487aad863d" => :high_sierra
   end
