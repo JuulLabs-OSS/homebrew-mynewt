@@ -1,11 +1,11 @@
-class MynewtNewt < Formula
+class MynewtNewtAT16 < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
   url "https://github.com/apache/mynewt-newt/archive/mynewt_1_6_0_tag.tar.gz"
   version "1.6.0"
   sha256 "5245fba3d2befc44cd71733dc5c9ae07681cc47d8f79152f439c021d446b7122"
 
-  head "https://github.com/apache/mynewt-newt.git"
+  keg_only :versioned_formula
 
   bottle do
     root_url "https://github.com/runtimeco/binary-releases/raw/master/mynewt-newt-tools_1.6.0"
