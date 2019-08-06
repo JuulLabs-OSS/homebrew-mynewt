@@ -22,7 +22,7 @@ class MynewtNewt < Formula
     (gopath/"src/mynewt.apache.org/newt").install contents
 
     cd gopath/"src/mynewt.apache.org/newt" do
-      system "./build"
+      system "./build.sh"
       bin.install "newt/newt"
     end
   end
