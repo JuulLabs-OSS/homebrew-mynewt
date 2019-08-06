@@ -1,11 +1,11 @@
-class MynewtNewtmgr < Formula
+class MynewtNewtmgrAT17 < Formula
   desc "Tool to manage devices running Mynewt OS via the Newtmgr Protocol"
   homepage "https://mynewt.apache.org"
   url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_7_0_tag.tar.gz"
   version "1.7.0"
   sha256 "7aaa8c1c6899a9f39957b51e69d02d5c202a58fa104efcdc5bae75d4691b8c2f"
 
-  head "https://github.com/apache/mynewt-newtmgr.git"
+  keg_only :versioned_formula
 
   bottle do
      root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
