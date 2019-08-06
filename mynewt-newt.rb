@@ -10,7 +10,7 @@ class MynewtNewt < Formula
   bottle do
     root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
     cellar :any_skip_relocation
-    sha256 "fb1bb0f021ee5facfdbd4b0e4eb40d4c06a4bfffb10615052f279c20bf9a07ee" => :high_sierra
+    sha256 "2eb52488b0dd8faf2d6a6764a8ea9d8132625bfae9f599fa23292b4bf5b6679b" => :high_sierra
   end
 
   depends_on "go" => :build
