@@ -10,7 +10,7 @@ class MynewtNewt < Formula
   bottle do
     root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
     cellar :any_skip_relocation
-    sha256 "fb1bb0f021ee5facfdbd4b0e4eb40d4c06a4bfffb10615052f279c20bf9a07ee" => :high_sierra
+    sha256 "f861c235c625e0c8ed62603a37e1902592e24cea29403e177654fcdb97e92507" => :high_sierra
   end
 
   depends_on "go" => :build
@@ -21,9 +21,9 @@ class MynewtNewt < Formula
     gopath = buildpath/"gopath"
     (gopath/"src/mynewt.apache.org/newt").install contents
 
-    cd gopath/"src/mynewt.apache.org/newt/newt" do
-      system "go", "build"
-      bin.install "newt"
+    cd gopath/"src/mynewt.apache.org/newt" do
+      system "./build"
+      bin.install "newt/newt"
     end
   end
 
