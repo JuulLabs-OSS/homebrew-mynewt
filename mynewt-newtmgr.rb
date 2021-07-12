@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class MynewtNewtmgr < Formula
   desc "Tool to manage devices running Mynewt OS via the Newtmgr Protocol"
   homepage "https://mynewt.apache.org"
@@ -8,13 +11,12 @@ class MynewtNewtmgr < Formula
   head "https://github.com/apache/mynewt-newtmgr.git"
 
   bottle do
-     root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
-     cellar :any_skip_relocation
-    sha256 "8f772a9cb14018f268effff2c33c492f1894416178dbb6c390e502c3e91ff6bc" => :high_sierra
+    root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
+    sha256 cellar: :any_skip_relocation, high_sierra: "8f772a9cb14018f268effff2c33c492f1894416178dbb6c390e502c3e91ff6bc"
   end
 
   depends_on "go" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   def install
     contents = Dir["{*,.git,.gitignore}"]
