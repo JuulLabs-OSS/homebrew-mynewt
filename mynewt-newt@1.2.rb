@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class MynewtNewtAT12 < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
@@ -5,16 +8,15 @@ class MynewtNewtAT12 < Formula
   version "1.2.0"
   sha256 "41e1b7ee526d1861e7b1e880848d090484960a6bafb31bb62d38d25212146736"
 
-  keg_only :versioned_formula
-
   bottle do
     root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.2.0"
-    cellar :any_skip_relocation
-    sha256 "14c58895c9805aa1df17638e483adb8a37fdb6911f96c7e80535fed2fa82ac94" => :sierra
+    sha256 cellar: :any_skip_relocation, sierra: "14c58895c9805aa1df17638e483adb8a37fdb6911f96c7e80535fed2fa82ac94"
   end
 
+  keg_only :versioned_formula
+
   depends_on "go" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   def install
     contents = Dir["{*,.git,.gitignore}"]

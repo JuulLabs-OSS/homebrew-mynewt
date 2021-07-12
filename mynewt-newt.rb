@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class MynewtNewt < Formula
   desc "Package, build and installation system for Mynewt OS applications"
   homepage "https://mynewt.apache.org"
@@ -8,7 +11,7 @@ class MynewtNewt < Formula
   head "https://github.com/apache/mynewt-newt.git"
 
   depends_on "go" => :build
-  depends_on :arch => :x86_64
+  depends_on arch: :x86_64
 
   def install
     contents = Dir["{*,.git,.gitignore}"]
