@@ -6,10 +6,10 @@ class MynewtNewtmgrAT18 < Formula
   homepage "https://mynewt.apache.org"
   url "https://github.com/apache/mynewt-newtmgr/archive/mynewt_1_8_0_tag.tar.gz"
   version "1.8.0"
-  sha256 "9914e614c3d7fcf64ce03fff7918f29711a7c48e35f6057ea0761e27b841339c"
+  sha256 "e6fe6cd133214ded12460a380c39f6ff3431c7ea91e45d8cded1b501e7500604"
 
   bottle do
-    root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.7.0"
+    root_url "https://github.com/JuulLabs-OSS/binary-releases/raw/master/mynewt-newt-tools_1.8.0"
     sha256 cellar: :any_skip_relocation, big_sur: "d7abe378aebcca72b7ebdca343b2eb401e5b721762d25b670cf8926aeb543bbf"
   end
 
